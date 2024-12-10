@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crunchyroll - Saiba Mais</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F47521;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .crunchy-navbar {
+      background-color: #F47521;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .crunchy-navbar h1 {
+      color: #FFFFFF;
+    }
+
+    .crunchy-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .crunchy-section h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #FFF8E7;
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .movie-item {
+      width: 200px;
+      position: relative;
+    }
+
+    .movie-item img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .movie-item img:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+
+    .movie-item .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .movie-item:hover .play-button {
+      opacity: 1;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #FFF8E7;
+      color: #F47521;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #e3d6c9;
+    }
+  </style>
+</head>
+<body>
+  <div class="crunchy-navbar">
+    <h1>Saiba Mais Sobre o Crunchyroll</h1>
+  </div>
+
+  <div class="crunchy-section">
+    <h2>O que o Crunchyroll oferece?</h2>
+    <p>O Crunchyroll é a casa do anime! Assista a séries icônicas e novos lançamentos simultaneamente com o Japão.</p>
+  </div>
+
+  <div class="crunchy-section">
+    <h2>Alguns Animes Exclusivos:</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <a href="https://www.crunchyroll.com/pt-br/demon-slayer-kimetsu-no-yaiba" target="_blank">
+          <img src="https://m.media-amazon.com/images/I/81FbB9C2MPL._AC_SY679_.jpg" alt="Demon Slayer">
+          <div class="play-button">►</div>
+        </a>
+      </div>
+      <div class="movie-item">
+        <a href="https://www.crunchyroll.com/pt-br/jujutsu-kaisen" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/4/49/Jujutsu_Kaisen.jpg/250px-Jujutsu_Kaisen.jpg" alt="Jujutsu Kaisen">
+          <div class="play-button">►</div>
+        </a>
+      </div>
+      <div class="movie-item">
+        <a href="https://www.crunchyroll.com/pt-br/attack-on-titan" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/en/6/67/Attack_on_Titan_final_season_key_visual.jpg" alt="Attack on Titan">
+          <div class="play-button">►</div>
+        </a>
+      </div>
+      <div class="movie-item">
+        <a href="https://www.crunchyroll.com/pt-br/one-piece" target="_blank">
+          <img src="https://m.media-amazon.com/images/I/91DQ5FTM-3L._AC_SY679_.jpg" alt="One Piece">
+          <div class="play-button">►</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="crunchy-section">
+    <a href="../index.html" class="back-button">Voltar</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix - Página</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #141414;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Barra superior */
+    .netflix-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 30px;
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra suave para dar profundidade */
+    }
+
+    .netflix-navbar img {
+      width: 120px;
+    }
+
+    .netflix-navbar div {
+      display: flex;
+      gap: 20px;
+    }
+
+    .netflix-navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .netflix-navbar a:hover {
+      color: #e50914; /* Cor vermelha típica da Netflix */
+    }
+
+    /* Responsividade da barra superior */
+    @media (max-width: 768px) {
+      .netflix-navbar {
+        padding: 10px 15px;
+      }
+
+      .netflix-navbar img {
+        width: 100px;
+      }
+
+      .netflix-navbar a {
+        font-size: 14px;
+      }
+    }
+
+    /* Banner */
+    .netflix-banner {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Stranger_Things_Season_4.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .netflix-banner h1 {
+      font-size: 56px;
+      font-weight: 700;
+      text-shadow: 2px 2px 20px rgba(255, 0, 0, 0.9); /* Vermelho Netflix */
+      margin: 0;
+    }
+
+    .netflix-banner p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 20px rgba(255, 0, 0, 0.9);
+    }
+
+    /* Seções */
+    .netflix-section {
+      padding: 40px 20px;
+    }
+
+    .netflix-section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .netflix-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: #e50914; /* Linha abaixo do título */
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-evenly;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      margin-right: 10px;
+      background-color: #e50914;
+      border-radius: 10px;
+      transition: transform 0.3s, opacity 0.3s;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: opacity 0.3s;
+    }
+
+    .movie-item:hover img {
+      opacity: 0.7;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-item .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: #fff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .movie-item:hover .play-button {
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: #555;
+      background-color: #111;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    /* Botão de Voltar */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #e50914;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .back-button:hover {
+      background-color: #f40612;
+    }
+
+    @media (max-width: 768px) {
+      .netflix-banner h1 {
+        font-size: 40px;
+      }
+
+      .netflix-banner p {
+        font-size: 16px;
+      }
+
+      .movie-item {
+        width: 150px;
+        height: 225px;
+      }
+
+      .movie-list {
+        justify-content: space-between;
+      }
+
+      .back-button {
+        bottom: 10px;
+        left: 10px;
+        padding: 12px 20px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegação -->
+  <div class="netflix-navbar">
+    <img src="https://loodibee.com/wp-content/uploads/Netflix-N-Symbol-logo-300x300.png" alt="Netflix Logo">
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Séries</a>
+      <a href="#">Filmes</a>
+      <a href="#">Minha Lista</a>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="netflix-banner">
+    <div>
+      <h1>Explore os melhores filmes e séries!</h1>
+      <p>Assista agora no Netflix</p>
+    </div>
+  </div>
+
+  <!-- Seção de Filmes Populares -->
+  <div class="netflix-section">
+    <h2>Filmes Populares</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/91miBpFYN5L.jpg" alt="Filme 1">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://i.pinimg.com/736x/fe/f1/84/fef1848e7cd7ef2df433591f5c00296d.jpg" alt="Filme 2">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-the-sandman-c-pop-arte-poster/poparteskins2/15925939631/2dee4647fddb5d94402a4d57854d2de4.jpeg" alt="Filme 3">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-the-walking-dead-b-pop-arte-poster/poparteskins2/15938544731/d6356cc7fea84eb0065d47e7929f76ea.jpeg" alt="Filme 4">
+        <div class="play-button">►</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de Séries -->
+  <div class="netflix-section">
+    <h2>Destaques</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://br.web.img3.acsta.net/pictures/24/03/04/11/24/2022353.jpg" alt="Série 1">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://img.elo7.com.br/product/zoom/268B91C/big-poster-filme-panico-2-1997-lo01-tamanho-90x60-cm-poster-cinema.jpg" alt="Série 2">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://wallpapers.com/images/hd/sweet-home-netflix-official-poster-v6u2gphttdtpyt5p.jpg" alt="Série 3">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://image.tmdb.org/t/p/original/6FMWx79iAtZx8WHtOrRj0VlM8Tp.jpg" alt="Série 4">
+        <div class="play-button">►</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão de Voltar -->
+  <a href="../home.html" class="back-button">Voltar</a>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Netflix - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

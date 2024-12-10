@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney+ - Página</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #141b29;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Barra superior com altura menor e bordas arredondadas */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 8px 20px; /* Menor altura */
+      background-color: #1d3b6c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-radius: 10px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar img {
+      width: 100px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    /* Banner */
+    .banner {
+      background-image: url('https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6A2E7DB101A31DAD66D4A7CD4C2BB85086F87C81C5625AD47B950DE6E9B88A96/scale?width=1200&aspectRatio=1.78');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 56px;
+      font-weight: 700;
+      text-shadow: 2px 2px 20px rgba(0, 170, 255, 0.9);
+    }
+
+    .banner p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 20px rgba(0, 170, 255, 0.9);
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .section h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #00aaff;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      background-color: #1d3b6c;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .movie-item a {
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 170, 255, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      color: #ddd;
+      background-color: #0c1727;
+      padding: 20px 0;
+      border-top: 2px solid #00aaff;
+    }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #00aaff;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 170, 255, 0.5);
+      z-index: 1000;
+    }
+
+    .back-button:hover {
+      background-color: #0078cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Disney_Plus_logo.svg/800px-Disney_Plus_logo.svg.png" alt="Disney+ Logo">
+    <div>
+      <a href="home.html">Home</a>
+      <a href="#">Filmes</a>
+      <a href="#">Séries</a>
+      <a href="#">Minha Lista</a>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div>
+      <h1>O Mundo Disney+</h1>
+      <p>Assista às suas histórias favoritas agora!</p>
+    </div>
+  </div>
+
+  <!-- Seção Populares -->
+  <div class="section">
+    <h2>Filmes Populares</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://img.elo7.com.br/product/zoom/26925F8/big-poster-filme-rei-leao-1994-lo04-tamanho-90x60-cm-rei-leao-disney.jpg" alt="rei leão">
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-piratas-do-caribe-a-maldicao-do-perola-negra-a-pop-arte-poster/poparteskins2/15938521856/114f28efb733ffd89777acc8f168900e.jpeg" alt="piratas">
+      </div>
+      <div class="movie-item">
+        <img src="https://www.oficialhostgeek.com.br/wp-content/uploads/2018/04/Os_Incríveis_Poster.jpg" alt="os incriveis">
+      </div>
+      <div class="movie-item">
+        <img src="https://br.web.img3.acsta.net/medias/nmedia/18/90/48/68/20099172.jpg" alt="pga o jak">
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção Destaques -->
+  <div class="section">
+    <h2>Destaques</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <a href="mandalorian.html">
+          <img src="https://uauposters.com.br/media/catalog/product/5/2/527120201013-uau-posters-star-wars-episode-ix-the-rise-of-skywalker-ascencao-2.jpg" alt="Star wars">
+        </a>
+      </div>
+      <div class="movie-item">
+        <a href="loki.html">
+          <img src="https://m.media-amazon.com/images/I/71Wa6h4cFwL.jpg" alt="aladdin">
+        </a>
+      </div>
+      <div class="movie-item">
+        <a href="wandavision.html">
+          <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177685420/poster-wandavision-b-bcac2f10.jpg" alt="WandaVision">
+        </a>
+      </div>
+      <div class="movie-item">
+        <a href="falcon-winter.html">
+          <img src="https://s2.glbimg.com/qCiXd31qTMIrhXmWb6kdh0YXZiU=/e.glbimg.com/og/ed/f/original/2018/06/27/predador.jpg" alt="predador">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="../home.html" class="back-button">Voltar</a>
+
+  <footer>
+    <p>&copy; 2024 Disney+ - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>

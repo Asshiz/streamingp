@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços de Streaming</title>
+  <style>
+    /* Barra superior */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      border-radius: 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .navbar button {
+      background-color: #ff5c5c;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    /* Layout principal */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 80px; /* Espaço para a barra fixa */
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Vídeo de fundo */
+    .video-container {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Miniaturas alinhadas lado a lado */
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 15px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .thumbnail {
+      width: 120px;
+      height: 70px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.1);
+    }
+
+    /* Botão "Saiba Mais" aparece ao passar o mouse */
+    .info-button {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 12px;
+      display: none;
+    }
+
+    .thumbnail:hover .info-button {
+      display: block;
+    }
+
+    /* Seção Sobre o Site */
+    .about-section {
+      width: 80%;
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 50px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .about-section p {
+      font-size: 16px;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+<!-- Barra superior -->
+<div class="navbar">
+  <div class="title">Serviços de Streaming</div>
+  <div class="buttons">
+    <button onclick="window.location.href = 'login.html';">Entrar</button>
+    <button onclick="window.location.href = 'cadastro.html';">Cadastro</button>
+  </div>
+</div>
+
+<!-- Vídeo de fundo -->
+<div class="video-container">
+  <video id="mainVideo" autoplay loop muted></video>
+</div>
+
+<!-- Miniaturas com "Saiba Mais" -->
+<div class="thumbnails" id="thumbnails">
+  <div class="thumbnail" style="background-image: url('fotos/Netflix.jpg');" 
+       onmouseover="playVideo('fotos/filmenet.mp4')" 
+       onmouseleave="stopVideo()">
+    <button class="info-button" onclick="goToLink('sobre/netflix.html')">Saiba Mais</button>
+  </div>
+  <div class="thumbnail" style="background-image: url('fotos/prime.png');" 
+       onmouseover="playVideo('fotos/filmeprime.mp4')" 
+       onmouseleave="stopVideo()">
+    <button class="info-button" onclick="goToLink('sobre/prime.html')">Saiba Mais</button>
+  </div>
+  <div class="thumbnail" style="background-image: url('fotos/Crunchyroll_logo_.webp');" 
+       onmouseover="playVideo('fotos/filmecrunch.mp4')" 
+       onmouseleave="stopVideo()">
+    <button class="info-button" onclick="goToLink('sobre/crunchyroll.html')">Saiba Mais</button>
+  </div>
+  <div class="thumbnail" style="background-image: url('fotos/disney.jpg');" 
+       onmouseover="playVideo('fotos/filmedisney.mp4')" 
+       onmouseleave="stopVideo()">
+    <button class="info-button" onclick="goToLink('sobre/disney.html')">Saiba Mais</button>
+  </div>
+  <div class="thumbnail" style="background-image: url('fotos/HBO.jpg');" 
+       onmouseover="playVideo('fotos/filmehbo.mp4')" 
+       onmouseleave="stopVideo()">
+    <button class="info-button" onclick="goToLink('sobre/hbo.html')">Saiba Mais</button>
+  </div>
+</div>
+
+<!-- Seção "Sobre o Site" -->
+<div class="about-section">
+  <h2>Sobre o nosso site</h2>
+  <p>Bem-vindo ao nosso portal de serviços de streaming! Aqui você encontra as melhores plataformas de vídeo, com acesso rápido e fácil a conteúdos exclusivos. Acesse, descubra e explore filmes, séries, documentários e muito mais!</p>
+  <p>Oferecemos uma seleção única de vídeos para você. Navegue pelas miniaturas acima e descubra trailers e conteúdos exclusivos de cada serviço. Aproveite uma experiência imersiva com vídeos dinâmicos!</p>
+</div>
+
+<script>
+  const mainVideo = document.getElementById('mainVideo');
+
+  function playVideo(videoPath) {
+    mainVideo.src = videoPath;
+    mainVideo.play();
+  }
+
+  function stopVideo() {
+    mainVideo.pause();
+    mainVideo.src = ""; // Limpa o caminho para evitar problemas
+  }
+
+  function goToLink(linkPath) {
+    window.location.href = linkPath;
+  }
+</script>
+</body>
+</html>

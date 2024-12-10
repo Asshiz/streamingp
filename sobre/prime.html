@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Prime Video</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ff9900; /* Laranja para Prime */
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(255, 153, 0, 0.6);
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sobre o Prime Video</h1>
+    <p>
+      O Prime Video é a plataforma de streaming da Amazon, oferecendo uma vasta gama de filmes, 
+      séries e documentários. O serviço é exclusivo para membros do Amazon Prime e inclui 
+      produções originais como "The Boys", "Jack Ryan" e "The Marvelous Mrs. Maisel".
+    </p>
+    <p>
+      Além de conteúdo exclusivo, o Prime Video oferece um catálogo diversificado de filmes e séries de todos os gêneros.
+    </p>
+    <h2>O que o Prime Video oferece:</h2>
+    <ul>
+      <li>Filmes e séries exclusivas como "The Boys" e "The Marvelous Mrs. Maisel".</li>
+      <li>Catálogo diversificado de filmes de Hollywood e lançamentos internacionais.</li>
+      <li>Opção de aluguel e compra de filmes recentes.</li>
+      <li>Acesso a outros serviços da Amazon, como Twitch e música.</li>
+      <li>Transmissões de esportes ao vivo, como futebol e basquete.</li>
+    </ul>
+    <h2>Alguns Filmes e Séries Exclusivos:</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-the-boys-d-pop-arte-poster/poparteskins2/15925939560/8ca4a7380de7ce63e88b1c828d76aac6.jpeg" alt="The Boys">
+      </div>
+      <div class="movie-item">
+        <img src="https://uauposters.com.br/media/catalog/product/1/8/181620240305-uau-posters-the-marvelous-mrs-maisel-maravilhosa-sra-maisel-series-2.jpg" alt="The Marvelous Mrs. Maisel">
+      </div>
+      <div class="movie-item">
+        <img src="https://br.web.img3.acsta.net/pictures/17/10/09/15/07/5550482.jpg" alt="Jack Ryan">
+      </div>
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/81sW1Bzte0L.jpg" alt="The Wheel of Time">
+      </div>
+    </div>
+    <a href="../index.html" class="back-button">Voltar</a>
+  </div>
+</body>
+</html>

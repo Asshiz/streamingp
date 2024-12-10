@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Netflix</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #e50914; /* Cor vermelha da Netflix */
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #e50914;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6);
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ff1e29;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sobre a Netflix</h1>
+    <p>
+      A Netflix é um serviço de streaming global que oferece uma vasta seleção de filmes, séries e documentários. 
+      Fundada em 1997, tornou-se a maior plataforma de streaming do mundo, conhecida por produções originais como 
+      "Stranger Things", "The Witcher" e "The Crown".
+    </p>
+    <p>
+      A plataforma oferece planos de assinatura mensais, além de produzir e distribuir conteúdo original, 
+      incluindo filmes e séries exclusivas para seus assinantes.
+    </p>
+    <h2>O que a Netflix oferece:</h2>
+    <ul>
+      <li>Filmes, séries, documentários e programas de TV exclusivos.</li>
+      <li>Conteúdo original premiado, como "The Witcher" e "Stranger Things".</li>
+      <li>Planos de assinatura acessíveis e sem contratos.</li>
+      <li>Acesso offline a vídeos para assistirem sem internet.</li>
+      <li>Recomendações personalizadas baseadas no seu gosto.</li>
+    </ul>
+    <h2>Alguns Filmes e Séries Exclusivos:</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/91miBpFYN5L.jpg" alt="Filme 1">
+      </div>
+      <div class="movie-item">
+        <img src="https://i.pinimg.com/736x/fe/f1/84/fef1848e7cd7ef2df433591f5c00296d.jpg" alt="Filme 2">
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-the-sandman-c-pop-arte-poster/poparteskins2/15925939631/2dee4647fddb5d94402a4d57854d2de4.jpeg" alt="Filme 3">
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-the-walking-dead-b-pop-arte-poster/poparteskins2/15938544731/d6356cc7fea84eb0065d47e7929f76ea.jpeg" alt="Filme 4">
+      </div>
+    </div>
+    <a href="../index.html" class="back-button">Voltar</a>
+  </div>
+</body>
+</html>

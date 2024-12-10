@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre HBO Max</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #f1c40f; /* Cor amarela da HBO */
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #f1c40f;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(255, 204, 0, 0.6);
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sobre o HBO Max</h1>
+    <p>
+      O HBO Max é uma plataforma de streaming que reúne todo o conteúdo da HBO, além de oferecer 
+      filmes, séries, e animações exclusivas. Com produções originais como "Succession", "Euphoria" 
+      e "Game of Thrones", a HBO Max oferece uma grande variedade de opções de entretenimento.
+    </p>
+    <p>
+      Além do conteúdo original, a plataforma inclui filmes de grandes estúdios, shows ao vivo, 
+      e uma vasta seleção de séries populares.
+    </p>
+    <h2>O que o HBO Max oferece:</h2>
+    <ul>
+      <li>Séries e filmes premiados como "Game of Thrones" e "Succession".</li>
+      <li>Conteúdo exclusivo da HBO e WarnerMedia.</li>
+      <li>Catálogo diversificado de filmes e animações.</li>
+      <li>Programas de TV ao vivo e produções de sucesso.</li>
+      <li>Conteúdo interativo e exclusividade de filmes recém-lançados.</li>
+    </ul>
+    <h2>Alguns Filmes e Séries Exclusivos:</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://acdn.mitiendanube.com/stores/004/687/740/products/pos-03084-3e07395049a19b0b6017181204018020-1024-1024.jpg" alt="Succession">
+      </div>
+      <div class="movie-item">
+        <img src="https://uauposters.com.br/media/catalog/product/4/0/404520210407-uau-posters-euphoria-series-2.jpg" alt="Euphoria">
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/1500x1500/poster-cartaz-game-of-thrones-a-pop-arte-poster/poparteskins2/15938543343/d2588b8b509bfbcc0cbf076733f2f219.jpeg" alt="Game of Thrones">
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/800x560/poster-cartaz-the-last-of-us-a-serie-pop-arte-poster/poparteskins2/15998657936/5ba933105094fe48515cca3866f5bdfa.jpeg" alt="The Last of Us">
+      </div>
+    </div>
+    <a href="../index.html" class="back-button">Voltar</a>
+  </div>
+</body>
+</html>

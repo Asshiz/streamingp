@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Crunchyroll</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ff8800; /* Laranja inspirado no Crunchyroll */
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #ff8800;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(255, 136, 0, 0.6);
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ffaa33;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sobre o Crunchyroll</h1>
+    <p>
+      O Crunchyroll é a principal plataforma de streaming dedicada aos fãs de anime em todo o mundo. 
+      Fundada em 2006, a plataforma oferece uma biblioteca imensa de séries e filmes de anime, 
+      além de mangás e jogos, criando uma experiência completa para os amantes da cultura japonesa.
+    </p>
+    <p>
+      Com legendas em diversos idiomas e simulcasts que permitem assistir a episódios logo após a 
+      transmissão no Japão, o Crunchyroll é o destino ideal para quem deseja acompanhar os lançamentos 
+      mais recentes do mundo dos animes.
+    </p>
+    <h2>O que o Crunchyroll oferece:</h2>
+    <ul>
+      <li>Uma biblioteca vasta com milhares de títulos de anime.</li>
+      <li>Simulcasts de séries populares logo após sua exibição no Japão.</li>
+      <li>Opções de dublagem e legendas em vários idiomas.</li>
+      <li>Conteúdo exclusivo para assinantes premium.</li>
+      <li>Acesso a mangás e eventos especiais da comunidade otaku.</li>
+    </ul>
+    <h2>Alguns Filmes e Séries Exclusivos:</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/91VivF555eL._AC_SL1500_.jpg" alt="Demon Slayer">
+      </div>
+      <div class="movie-item">
+        <img src="https://kanto.legiaodosherois.com.br/w1200-q95-k1/wp-content/uploads/2023/08/legiao_CtJ6yvj9hBEa.png.webp" alt="Jujutsu Kaisen">
+      </div>
+      <div class="movie-item">
+        <img src="https://www.europanet.com.br/superposter/images/vejapordentro/60223/60223.jpg" alt="Attack on Titan">
+      </div>
+      <div class="movie-item">
+        <img src="https://a.storyblok.com/f/178900/1064x1596/bccf76f674/dandadan-key-art-tall.png/m/filters:quality(95)format(webp)" alt="DanDaDan">
+      </div>
+    </div>
+    <a href="../index.html" class="back-button">Voltar</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Video - Página</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #141414;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Barra superior com altura menor e bordas arredondadas */
+    .prime-video-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 8px 20px; /* Menor altura */
+      background-color: #1c1c1c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-radius: 10px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .prime-video-navbar img {
+      width: 100px;
+    }
+
+    .prime-video-navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    .prime-video-navbar a:hover {
+      color: #ff8c00;
+    }
+
+    /* Banner */
+    .prime-video-banner {
+      background-image: url('https://m.media-amazon.com/images/I/81uIJ5Hi0QL._AC_SY879_.jpg'); /* Imagem do banner Prime Video */
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .prime-video-banner h1 {
+      font-size: 56px;
+      font-weight: 700;
+      text-shadow: 2px 2px 20px rgba(255, 140, 0, 0.9); /* Cor Prime Video */
+    }
+
+    .prime-video-banner p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 20px rgba(255, 140, 0, 0.9);
+    }
+
+    .prime-video-section {
+      padding: 40px 20px;
+    }
+
+    .prime-video-section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .prime-video-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: #ff8c00; /* Linha abaixo do título */
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-evenly;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      margin-right: 10px;
+      background-color: #cd4100;
+      border-radius: 10px;
+      transition: transform 0.3s, opacity 0.3s;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: opacity 0.3s;
+    }
+
+    .movie-item:hover img {
+      opacity: 0.7;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-item .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: #fff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .movie-item:hover .play-button {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      background-color: #1c1c1c;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ff8c00;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .back-button:hover {
+      background-color: #e57d00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegação -->
+  <div class="prime-video-navbar">
+    <img src="https://img.icons8.com/nolan/512/amazon-prime.png" alt="Prime Video Logo">
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Séries</a>
+      <a href="#">Filmes</a>
+      <a href="#">Minha Lista</a>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="prime-video-banner">
+    <div>
+      <h1>Assista ao melhor do entretenimento!</h1>
+      <p>Filmes e séries no Prime Video</p>
+    </div>
+  </div>
+
+  <!-- Seção de Filmes Populares -->
+  <div class="prime-video-section">
+    <h2>Filmes Populares</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177680691/poster-the-batman-j-4033ffcb.jpg" alt="Filme 1">
+      </div>
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/71BRUy-RvvL._AC_UF894,1000_QL80_.jpg" alt="Filme 2">
+      </div>
+      <div class="movie-item">
+        <img src="https://img.elo7.com.br/product/zoom/2677A9D/big-poster-filme-homem-aranha-de-volta-ao-lar-lo11-90x60-cm-geek.jpg" alt="Filme 3">
+      </div>
+      <div class="movie-item">
+        <img src="https://a-static.mlcdn.com.br/800x560/poster-cartaz-o-corvo-pop-arte-poster/poparteskins2/pos-03727-30x45cm/d54fb088fd390113073b81a1dd9363d8.jpeg" alt="Filme 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de Destaques -->
+  <div class="prime-video-section">
+    <h2>Destaques</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://uauposters.com.br/media/catalog/product/9/0/901320221026-uau-posters-the-boys-series-5.jpg" alt="Série 1">
+      </div>
+      <div class="movie-item">
+        <img src="https://i.pinimg.com/736x/d9/1c/6a/d91c6aa3b49be880642b760edc129012.jpg" alt="Série 2">
+      </div>
+      <div class="movie-item">
+        <img src="https://img.elo7.com.br/product/zoom/1D05C7D/poster-supernatural-tamanho-90x-0-cm-lo007-nerd.jpg" alt="Série 3">
+      </div>
+      <div class="movie-item">
+        <img src="https://acdn.mitiendanube.com/stores/004/687/740/products/pos-01874-684e1313b841e20bb417181254729263-1024-1024.jpg" alt="Série 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão de Voltar -->
+  <a href="../home.html" class="back-button">Voltar</a>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Prime Video - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

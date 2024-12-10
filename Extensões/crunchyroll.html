@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crunchyroll - Página</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #141414;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Barra superior com altura menor e bordas arredondadas */
+    .crunchyroll-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 8px 20px; /* Menor altura */
+      background-color: #1c1c1c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-radius: 10px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .crunchyroll-navbar img {
+      width: 100px;
+    }
+
+    .crunchyroll-navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    .crunchyroll-navbar a:hover {
+      color: #ff8c00;
+    }
+
+    /* Banner */
+    .crunchyroll-banner {
+      background-image: url('https://media.crunchyroll.com/crunchyroll-media/1bb11d92-0d45-408b-b876-63d25b0e68ad.jpg'); /* Imagem do banner Crunchyroll */
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .crunchyroll-banner h1 {
+      font-size: 56px;
+      font-weight: 700;
+      text-shadow: 2px 2px 20px rgba(255, 140, 0, 0.9); /* Cor Crunchyroll */
+    }
+
+    .crunchyroll-banner p {
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 20px rgba(255, 140, 0, 0.9);
+    }
+
+    .crunchyroll-section {
+      padding: 40px 20px;
+    }
+
+    .crunchyroll-section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .crunchyroll-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: #ff8c00; /* Linha abaixo do título */
+    }
+
+    .movie-list {
+      display: flex;
+      justify-content: space-evenly;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .movie-item {
+      width: 200px;
+      height: 300px;
+      margin-right: 10px;
+      background-color: #cd4100;
+      border-radius: 10px;
+      transition: transform 0.3s, opacity 0.3s;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: opacity 0.3s;
+    }
+
+    .movie-item:hover img {
+      opacity: 0.7;
+    }
+
+    .movie-item:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-item .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: #fff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .movie-item:hover .play-button {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      background-color: #1c1c1c;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ff8c00;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .back-button:hover {
+      background-color: #e57d00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegação -->
+  <div class="crunchyroll-navbar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Crunchyroll_Logo.png/640px-Crunchyroll_Logo.png" alt="Crunchyroll Logo">
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Séries</a>
+      <a href="#">Filmes</a>
+      <a href="#">Minha Lista</a>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="crunchyroll-banner">
+    <div>
+      <h1>Assista ao melhor do anime!</h1>
+      <p>Filmes e séries diretamente de Crunchyroll</p>
+    </div>
+  </div>
+
+  <!-- Seção de Filmes Populares -->
+  <div class="crunchyroll-section">
+    <h2>Filmes Populares</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/81s+jxE5KEL._AC_SL1500_.jpg" alt="Jujutsu Kaisen">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://www.ubuy.com.br/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFsTnN6N094MVMuX0FDX1NMMTUwMF8uanBn.jpg" alt="Attack on Titan">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/81jH5-U+1wL._AC_UF894,1000_QL80_.jpg" alt="Demon Slayer">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/811ixHxAxhL.jpg" alt="Boku no Hero">
+        <div class="play-button">►</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de Destaques -->
+  <div class="crunchyroll-section">
+    <h2>Destaques</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://a.storyblok.com/f/178900/1080x1350/e96617fcc7/look-back-streaming-poster-long.jpeg/m/filters:quality(95)format(webp)" alt="Look Back">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://mangalivre.com.br/wp-content/uploads/2023/11/Mashle-Mashle-Magic-and-Muscles-GQCA-img-bbGozH.webp" alt="Mashle">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://m.media-amazon.com/images/I/81cUBwUTL+L._AC_UF894,1000_QL80_.jpg" alt="DanDaDan">
+        <div class="play-button">►</div>
+      </div>
+      <div class="movie-item">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/book/y/k/m/solo-leveling-vol-2-original-imah4hhdzaaftsvp.jpeg?q=90&crop=false" alt="Solo Leveling">
+        <div class="play-button">►</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão de Voltar -->
+  <a href="../home.html" class="back-button">Voltar</a>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Crunchyroll - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

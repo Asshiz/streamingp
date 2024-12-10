@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo à Home</title>
+  <style>
+    /* Barra superior */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      border-radius: 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Layout principal */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 80px; /* Espaço para a barra fixa */
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Estilo do conteúdo principal */
+    .content {
+      text-align: center;
+      max-width: 800px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .content h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilo dos botões */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .btn {
+      background-color: #ff5c5c;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff2a2a;
+    }
+
+    /* Botão de voltar no canto inferior direito */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff5c5c;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .back-button:hover {
+      background-color: #ff2a2a;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #555;
+      font-size: 14px;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra superior -->
+  <div class="navbar">
+    <div class="title">Serviços de Streaming</div>
+  </div>
+
+  <!-- Seção Principal -->
+  <main>
+    <div class="content">
+      <h2>Descubra os melhores serviços de streaming</h2>
+      <p>Explore nossos serviços e comece sua jornada de entretenimento agora mesmo.</p>
+      <div class="buttons">
+        <a href="./Extensões/netflix.html" class="btn">Netflix</a>
+        <a href="./Extensões/prime.html" class="btn">Amazon Prime</a>
+        <a href="./Extensões/crunchyroll.html" class="btn">Crunchyroll</a>
+        <a href="./Extensões/disney.html" class="btn">Disney+</a>
+        <a href="./Extensões/hbo.html" class="btn">HBO</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Botão de Voltar -->
+  <a href="index.html" class="back-button">Voltar</a>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
